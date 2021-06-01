@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My first web page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        html {
+            min-height: 100%;
+            background-image: url(images\grey-ombre.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        h2, h3 {
+            font-family: monospace;
+            font-style: italic;
+        }
+        h3 {
+            display: none;
+            margin-left: 30px;
+        }
+        img {
+            display: none;
+            width: 500px;
+            border-radius: 30px;
+        }
+        p {
+            display: none;
+            margin-left: 150px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <img src="images\wallpaper.jpg" alt="1">
+    <h2>Travel around Scandinavia</h2>
+    <h3 class="country1">Norway</h3>
+        <img src="images\image-20200801115420-1.jpeg" alt="Deichman Library in Oslo - Norway" id="1"><br>
+        <P id="2">Deichman Library in Oslo - Norway</P>
+        <img src="images\insideLibrary1.jpg" alt="insideLibrary" id="7">
+    <h3 class="country2">Sweden</h3>
+        <img src="images\Stockholm(1).jpg" alt="Stockholm - Capital of Sweden" id="3"><br>
+        <P id="4">Stockholm - Capital of Sweden</P><br>
+    <h3 class="country3">Finland</h3>
+        <img src="images\Helsinki.jpeg" alt="Helsinki - Capital of Finland" id="5"><br>
+        <P id="6">Helsinki - Capital of Finland</P><br>  
+    <script>
+        $(document).ready(function(){
+            $("h2").click(function() {
+                $("h3").fadeToggle();
+            });    
+
+            $(".country1").click(function() {
+                $("#1").fadeToggle();
+                $("#2").fadeToggle();
+            });
+
+            $("#1").click(function() {$("7").fadeIn})
+
+            $(".country2").click(function() {
+                $("#3").fadeToggle();
+                $("#4").fadeToggle();
+            });
+
+            $(".country3").click(function() {
+                $("#5").fadeToggle();
+                $("#6").fadeToggle();
+            });
+            
+            $("button").click(function(){
+                
+                $("img").fadeOut("slow");
+        });
+    });
+    </script>
+</body>
+</html>
